@@ -1,4 +1,4 @@
-%posicao(1,[1,2,3,4,5,6,7],L)
-posicao(0,[H|_],H).
-posicao(I,[_|T],X) :- I2 is I-1, posicao(I2,T,X).
-%L = 2.
+%posicao(3,[1,2,3,4,5,6,7],P)
+posicao(X,[X|_],0).
+posicao(X,[_|T],P) :- posicao(X,T,P2), !, P is P2 + 1.
+%P = 2.
